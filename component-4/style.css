@@ -1,0 +1,90 @@
+section#component_4 {
+  margin-top: 5%;
+}
+
+section#component_4 .txt-title {
+  font-size: 26px;
+  font-weight: 700;
+  margin-bottom: 5px;
+}
+
+section#component_4 .txt-subtitle {
+  font-size: 20px;
+  font-weight: 700;
+}
+
+section#component_4 .txt-content {
+  font-size: 16px;
+  margin-bottom: unset;
+}
+
+section#component_4 .margin-bottom {
+  margin-bottom: 20px;
+}
+
+section#component_4>div.label-container {
+  text-align: center;
+  margin-bottom: 30px !important;
+}
+
+section#component_4>div.accordion>div.accordion-item>button.accordion-header {
+  width: 100%;
+  padding: 15px 40px 15px 15px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+  outline: unset;
+  border: unset;
+  cursor: pointer;
+  font-size: 20px;
+  text-align: left;
+  background-color: #fff;
+  border-bottom: 1px solid #d1d1d1;
+}
+
+section#component_4>div.accordion>div.accordion-item>button.accordion-header::after {
+  content: '\276F';
+  font-size: 14px;
+  position: absolute;
+  right: 20px;
+  transition: transform 0.3s ease, color 0.3s ease;
+  transform: rotate(90deg);
+}
+
+section#component_4>div.accordion>div.accordion-item>button.accordion-header.active::after {
+  transform: rotate(270deg);
+}
+
+section#component_4>div.accordion>div.accordion-item>div.accordion-content {
+  background-color: #fafafa;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height .3s linear, padding .3s linear;
+  padding: 0 30px;
+}
+
+section#component_4>div.accordion>div.accordion-item>div.accordion-content>div.grid-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+section#component_4>div.accordion>div.accordion-item>div.accordion-content>div.grid-container>div.grid-img>img {
+  display: block;
+  width: 100%;
+}
+
+section#component_4>div.accordion>div.accordion-item>div.accordion-content>div.grid-container>div.grid-span {
+  grid-column: span 2 / span 2;
+}
+
+@media screen and (max-width: 767.78px) {
+  section#component_4>div.accordion>div.accordion-item>div.accordion-content>div.grid-container {
+    grid-template-columns: 1fr;
+  }
+
+  section#component_4>div.accordion>div.accordion-item>div.accordion-content>div.grid-container>div.grid-span {
+    grid-column: auto;
+  }
+}

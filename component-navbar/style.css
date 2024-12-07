@@ -1,0 +1,353 @@
+div#component_navbar {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+  padding: 10px 0 0;
+  background-color: #fff;
+}
+
+div#component_navbar::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 20px;
+  background-color: #fff;
+}
+
+div#component_navbar .txt-title {
+  display: block;
+  font-size: 14px;
+  font-weight: 700;
+  color: #222;
+}
+
+div#component_navbar .txt-content {
+  font-size: 14px;
+  font-weight: 400;
+  color: #555;
+}
+
+div#component_navbar .txt-link {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+div#component_navbar .txt-link a {
+  display: block;
+  transition: transform .2s linear;
+}
+
+div#component_navbar .txt-link a:hover {
+  transform: translateX(5px);
+}
+
+div#component_navbar a {
+  text-decoration: unset;
+  color: #000;
+}
+
+div#component_navbar>div.web-logo>a>img {
+  max-width: 200px;
+  height: auto;
+  display: block;
+  position: relative;
+  z-index: 1;
+}
+
+div#component_navbar>div.nav-container>div.sidebar-head {
+  display: none;
+}
+
+div#component_navbar>div.nav-container>div.sidebar-head .close-sidebar {
+  background-color: unset;
+  border: unset;
+  cursor: pointer;
+}
+
+div#component_navbar>div.nav-container>nav.navbar>ul.menu-list {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+div#component_navbar>div.nav-container>nav.navbar>ul.menu-list>li.menu-item {
+  padding: 30px 10px 20px;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+  font-size: 14px;
+  font-weight: 700;
+  transition: box-shadow .2s linear;
+}
+
+div#component_navbar>div.nav-container>nav.navbar>ul.menu-list>li.menu-item button.dropdown-submenu {
+  background-color: unset;
+  border: unset;
+  padding: 10px;
+  cursor: pointer;
+  display: none;
+}
+
+div#component_navbar>div.nav-container>nav.navbar>ul.menu-list>li.menu-item:hover {
+  box-shadow: 1px 5px 9px #00000029;
+}
+
+div#component_navbar>div.nav-container>nav.navbar>ul.menu-list>li.menu-item>a {
+  position: relative;
+  display: block;
+  font-size: 14px;
+  font-weight: 400;
+  text-transform: uppercase;
+}
+
+div#component_navbar>div.nav-container>nav.navbar>ul.menu-list>li.menu-item>a>span {
+  position: relative;
+}
+
+div#component_navbar>div.nav-container>nav.navbar>ul.menu-list>li.menu-item>a::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 5px;
+  background-color: #69BCCA;
+  bottom: -1px;
+  left: 0;
+  right: 0;
+  opacity: 0;
+  transition: all .2s linear;
+}
+
+div#component_navbar>div.nav-container>nav.navbar>ul.menu-list>li.menu-item:hover>a::before {
+  bottom: 2px;
+  opacity: 1;
+}
+
+div#component_navbar>div.nav-container>nav.navbar>ul.menu-list>li.menu-item>ul.menu-sub {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  padding: 20px 0;
+  position: absolute;
+  top: calc(100% - 10px);
+  left: 0;
+  width: 100%;
+  z-index: 10;
+  background-color: #fff;
+  box-shadow: 1px 5px 6px #00000029;
+  opacity: 0;
+  visibility: hidden;
+  transition: all .2s linear;
+}
+
+div#component_navbar>div.nav-container>nav.navbar>ul.menu-list>li.menu-item:hover>ul.menu-sub {
+  top: 100%;
+  opacity: 1;
+  visibility: visible;
+}
+
+div#component_navbar>div.nav-container>nav.navbar>ul.menu-list>li.menu-item>ul.menu-sub::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #fff;
+  z-index: -1;
+}
+
+div#component_navbar>div.nav-container>nav.navbar>ul.menu-list>li.menu-item>ul.menu-sub::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #fff;
+  z-index: -1;
+}
+
+div#component_navbar>div.nav-container>nav.navbar>ul.menu-list>li.menu-item>ul.menu-sub>li.menu-sub-item.col-5 {
+  flex: 16.6667%;
+}
+
+div#component_navbar>div.nav-container>nav.navbar>ul.menu-list>li.menu-item>ul.menu-sub>li.menu-sub-item.col-6 {
+  flex: 25%;
+}
+
+div#component_navbar>div.nav-container>nav.navbar>ul.menu-list>li.menu-item>ul.menu-sub>li.menu-sub-item img {
+  width: 100%;
+  max-width: 300px;
+  object-fit: contain;
+  transition: transform .2s linear;
+}
+
+div#component_navbar>div.nav-container>nav.navbar>ul.menu-list>li.menu-item>ul.menu-sub>li.menu-sub-item img:hover {
+  transform: scale(1.05);
+}
+
+div#component_navbar>div.nav-container>nav.navbar>ul.menu-list>li.menu-item>ul#promotion_menu {
+  flex-wrap: wrap;
+}
+
+div#component_navbar>button.hamburger {
+  border: unset;
+  background-color: unset;
+  padding: 0;
+  height: 40px;
+  width: 40px;
+  cursor: pointer;
+  display: none;
+}
+
+@media screen and (max-width: 1199.98px) {
+  div#component_navbar {
+    padding: 10px 0;
+  }
+
+  div#component_navbar .txt-title {
+    margin-bottom: 20px !important;
+  }
+
+  div#component_navbar .txt-link {
+    margin-bottom: 20px;
+    gap: 20px;
+  }
+
+  div#component_navbar>button.hamburger {
+    display: block;
+  }
+
+  div#component_navbar::after {
+    display: none;
+  }
+
+  div#component_navbar::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    visibility: hidden;
+    background-color: rgba(0, 0, 0, 0.3);
+    transition: opacity .2s linear;
+  }
+
+  div#component_navbar.active::before {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  div#component_navbar>div.nav-container {
+    position: fixed;
+    top: 0;
+    left: -100%;
+    height: 100%;
+    width: 300px;
+    background-color: #fff;
+    padding: 30px 20px;
+    z-index: 10;
+    overflow-y: scroll;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    transition: left .2s linear;
+  }
+
+  div#component_navbar>div.nav-container::-webkit-scrollbar {
+    display: none;
+  }
+
+  div#component_navbar.active>div.nav-container {
+    left: 0;
+  }
+
+  div#component_navbar>div.nav-container>div.sidebar-head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+  }
+
+  div#component_navbar>div.nav-container>div.sidebar-head .logo-sidebar>img {
+    width: 150px;
+  }
+
+  div#component_navbar>div.nav-container>nav.navbar>ul.menu-list {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  div#component_navbar>div.nav-container>nav.navbar>ul.menu-list>li.menu-item {
+    width: 100%;
+    padding: 0;
+    margin-bottom: 0;
+  }
+
+  div#component_navbar>div.nav-container>nav.navbar>ul.menu-list>li.menu-item:hover {
+    box-shadow: unset;
+  }
+
+  div#component_navbar>div.nav-container>nav.navbar>ul.menu-list>li.menu-item>a::before {
+    display: none;
+  }
+
+  div#component_navbar>div.nav-container>nav.navbar>ul.menu-list>li.menu-item>div.menu-link {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+  }
+
+  div#component_navbar>div.nav-container>nav.navbar>ul.menu-list>li.menu-item button.dropdown-submenu {
+    display: block;
+    transition: transform .2s linear;
+  }
+
+  div#component_navbar>div.nav-container>nav.navbar>ul.menu-list>li.menu-item button.dropdown-submenu.active {
+    transform: rotate(180deg);
+  }
+
+  div#component_navbar>div.nav-container>nav.navbar>ul.menu-list>li.menu-item>ul.menu-sub {
+    position: static;
+    flex-direction: column;
+    justify-content: start;
+    opacity: 1;
+    visibility: visible;
+    /* padding: 10px 0; */
+    gap: 0;
+    box-shadow: unset;
+
+    max-height: 0;
+    overflow: hidden;
+    padding: 0;
+    transition: max-height .3s linear, padding .3s linear;
+  }
+
+  div#component_navbar>div.nav-container>nav.navbar>ul.menu-list>li.menu-item>ul#promotion_menu {
+    flex-wrap: nowrap;
+  }
+
+  div#component_navbar>div.nav-container>nav.navbar>ul.menu-list>li.menu-item>ul.menu-sub::before,
+  div#component_navbar>div.nav-container>nav.navbar>ul.menu-list>li.menu-item>ul.menu-sub::after {
+    display: none;
+  }
+
+  div#component_navbar>div.nav-container>nav.navbar>ul.menu-list>li.menu-item>ul.menu-sub>li.menu-sub-item.img-link {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 767.98px) {
+  div#component_navbar>div.web-logo>a>img {
+    max-width: 130px;
+  }
+}

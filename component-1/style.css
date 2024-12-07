@@ -1,0 +1,85 @@
+section#component_1 {
+  margin-top: 5%;
+}
+
+section#component_1 .txt-title {
+  font-size: 26px;
+  font-weight: 700;
+  margin-bottom: 5px;
+}
+
+section#component_1 .txt-content {
+  font-size: 18px;
+  margin-bottom: unset;
+}
+
+section#component_1 .txt-small {
+  font-size: 12px;
+}
+
+section#component_1>div.label-container {
+  text-align: center;
+  margin-bottom: 30px !important;
+}
+
+section#component_1>div.card-container {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto;
+  gap: 20px;
+}
+
+section#component_1>div.card-container>div.card-item {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+section#component_1>div.card-container>div.card-item>div.card-img {
+  grid-area: img;
+  overflow: hidden;
+}
+
+section#component_1>div.card-container>div.card-item>div.card-img>img {
+  display: block;
+  width: 100%;
+}
+
+section#component_1>div.card-container>div.card-item>div.card-content {
+  text-align: center;
+  grid-area: content;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+section#component_1>div.card-container>div.card-item:nth-child(even) {
+  grid-template-areas: "content img";
+}
+
+section#component_1>div.card-container>div.card-item:nth-child(odd) {
+  grid-template-areas: "img content";
+}
+
+@media screen and (max-width: 767.98px) {
+  section#component_1>div.card-container>div.card-item {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "img"
+      "content";
+  }
+
+  section#component_1>div.card-container>div.card-item:nth-child(even) {
+    grid-template-areas:
+      "img"
+      "content";
+  }
+
+  section#component_1>div.card-container>div.card-item:nth-child(odd) {
+    grid-template-areas:
+      "img"
+      "content";
+  }
+}
